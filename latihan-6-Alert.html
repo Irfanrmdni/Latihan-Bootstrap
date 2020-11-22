@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Latihan-06-Alert</title>
+</head>
+
+<body>
+    <!-- 
+        Latihan membuat Alert
+        yaitu sebuah message notifikasi / pesan notifikasi
+
+        aria dan role itu berfungsi untuk menjelaskan fungsi dari kontrol user interface seperti menu, slide, dll.
+
+        class="fade" untuk memberikan efek fade pada saat pemunculan / penutupan
+
+        data-dismiss untuk menutup dari elemen misalnya alert/modal dan lain-lain
+
+        ARIA kepanjangan dari Accessible Rich Internet Applications, merupakan bagian dari XHTML.
+        Dengan penggunan ARIA penulisan atribut di HTML menjadi lebih semantic (Semantik: dapat diartikan 
+        sebagai ilmu tentang makna atau tentang arti, yaitu salah satu dari tiga tataran analisis 
+        bahasa ; fonologi, gramatika dan semantic.).
+
+        Atribut aria-hidden 
+        digunakan untuk menyembunyikan konten untuk pengguna tunanetra yang menavigasi melalui 
+        aplikasi menggunakan pembaca layar (JAWS, NVDA, ...).
+        Atribut aria-hidden digunakan dengan nilai true, false.
+
+        aria-labelledby
+        Baik aria-label dan aria-labelled by digunakan untuk mengkomunikasikan label. Tapi aria-labelledby 
+        dapat digunakan untuk referensi label apa pun yang sudah ada di halaman sedangkan aria-label digunakan 
+        untuk mengkomunikasikan label yang saya tidak ditampilkan secara visual
+
+        aria-label
+        memungkinkan kita untuk menetapkan string yang akan digunakan sebagai label yang bisa diakses. 
+        Ini akan menggantikan mekanisme pelabelan asli lainnya, seperti elemen label — misalnya,
+        jika button memiliki materi teks dan sebuah aria-label, maka hanya nilai aria-label yang akan digunakan.
+
+        aria-owns
+        adalah salah satu hubungan ARIA yang paling banyak digunakan. Atribut ini memungkinkan kita memberi tahu teknologi 
+        pendukung bahwa elemen yang terpisah di DOM harus diperlakukan sebagai anak dari elemen saat ini, atau untuk menyusun 
+        ulang elemen anak yang ada ke dalam urutan yang berbeda. Misalnya, jika sebuah sub-menu munculan secara visual diposisikan 
+        di dekat menu induknya, namun tidak bisa berupa anak DOM dari induknya karena akan memengaruhi presentasi visual, 
+        Anda bisa menggunakan aria-owns untuk menyajikan sub-menu tersebut sebagai anak dari menu induk ke pembaca layar.
+
+        aria-activedescendant
+        aria-activedescendant memainkan peranan terkait. Mirip dengan elemen aktif pada laman yang merupakan elemen berfokus, 
+        menyetel turunan aktif elemen memungkinkan kita untuk memberi tahu teknologi pendukung bahwa suatu elemen harus disajikan 
+        kepada pengguna sebagai elemen berfokus bila induknya memiliki fokus. Misalnya, dalam listbox, Anda mungkin ingin membiarkan 
+        fokus laman pada kontainer listbox, namun tetap memperbarui atribut aria-activedescendant-nya ke item daftar yang dipilih saat 
+        ini. Hal ini membuat item yang dipilih saat ini tampak oleh teknologi pendukung seakan item yang difokus.
+
+        aria-describedby
+        aria-describedby menyediakan keterangan yang bisa diakses dengan cara yang sama dengan label yang disediakan oleh aria-labelledby. Seperti
+        halnya aria-labelledby, aria-describedby dapat mereferensikan elemen yang dalam keadaan lain tidak akan terlihat, baik yang disembunyikan 
+        dari DOM, atau yang disembunyikan dari pengguna teknologi pendukung. Ini merupakan teknik berguna bila ada beberapa teks penjelasan tambahan 
+        yang mungkin dibutuhkan pengguna, baik yang hanya berlaku pada pengguna teknologi pendukung atau pun semua pengguna
+    -->
+    <div class="container">
+        <h1 class="text-center">Alert 01</h1>
+        <div class="alert alert-primary" role="alert">
+            This is a primary alert—check it out!
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            This is a secondary alert—check it out!
+        </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Anda berhasil Login
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hiddenn="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            Anda tidak bisa login
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hiddenn="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-warning" role="alert">
+            Password salah
+        </div>
+        <div class="alert alert-info" role="alert">
+            This is a info alert—check it out!
+        </div>
+        <div class="alert alert-light" role="alert">
+            This is a light alert—check it out!
+        </div>
+        <div class="alert alert-dark" role="alert">
+            This is a dark alert—check it out!
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">Alert 02 - link</h1>
+        <div class="alert alert-primary" role="alert">
+            This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you
+            like.
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            This is a secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you
+            like.
+        </div>
+        <div class="alert alert-success" role="alert">
+            Anda berhasil login <a href="#" class="alert-link">an example link</a>. Give it a click if you
+            like.
+        </div>
+        <div class="alert alert-danger" role="alert">
+            Anda tidak bisa login <a href="#" class="alert-link">Bantuan</a>. Tekan link nya
+        </div>
+        <div class="alert alert-warning" role="alert">
+            This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you
+            like.
+        </div>
+        <div class="alert alert-info" role="alert">
+            This is a info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <div class="alert alert-light" role="alert">
+            This is a light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+        <div class="alert alert-dark" role="alert">
+            This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">Alert-03-Pesan</h1>
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Login Berhasil</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit
+                longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        </div>
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Login Gagal</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit
+                longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        </div>
+    </div>
+
+    <form action="">
+        <fieldset>
+            <legend>Adjust Quantity</legend>
+            <div>
+                <label for="qty-element">Current Quantity</label>
+                <input type="text" role="alert" aria-live="assertive" value="0" id="qty-element" />
+                <button type="button" aria-label='Add to Quantity' aria-controls="qty-element">+</button>
+                <button type="button" aria-label='Subtract from Quantity' title="subtract 10"
+                    aria-controls="qty-element">=</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

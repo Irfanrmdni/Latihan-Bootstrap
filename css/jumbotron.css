@@ -1,0 +1,18 @@
+.jumbotron {
+    background-image: url(../asset/jumbotron1.jpg);
+    background-size: cover;
+    height: 650px;
+    color: white;
+}
+h1.display-4 {
+    margin-top: 40px;
+    font-size: 45px;
+    width: 75%;
+}
+.jumbotron p {
+    font-size: 25px;
+    width: 75%;
+}
+.btn {
+    padding: 8px 30px;
+}

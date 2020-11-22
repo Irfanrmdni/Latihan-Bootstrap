@@ -1,0 +1,26 @@
+.container {
+    margin-top: 10%;
+    background-color: rgb(240, 240, 240);
+    padding: 35px;
+    width: 35%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,0.2);
+}
+
+.container h4 {
+    margin-bottom: 20px;
+    color: rgb(109, 108, 108);
+}
+
+.container hr {
+    border: solid 1px rgb(109, 108, 108);
+}
+
+.container button {
+    width: 30%;
+    margin-top: 15px;
+}
+
+.container .satu {
+    margin-left: 75px;
+}
+

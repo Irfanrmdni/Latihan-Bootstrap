@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Latihan-07-Form</title>
+</head>
+
+<body>
+    <!-- Latihan Membuat Form -->
+    <div class="container">
+        <h2 class="alert alert-primary text-center mt-3">Formulir Pendaftaran Mahasiswa</h2>
+        <!-- form nama lengkap -->
+        <form class="bg-light">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group mt-3">
+                        <label for="inputNama">Nama Depan</label>
+                        <input type="text" id="inputNama" class="form-control"
+                            placeholder="Masukan nama depan calon mahasiswa" aria-describedby="namehelp">
+                        <small id="namahelp" class="form-text text-muted">Masukan nama depan sesuai dengan KTP</small>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group mt-3">
+                        <label for="inputNama">Nama Belakang</label>
+                        <input type="text" id="inputNama" class="form-control"
+                            placeholder="Masukan nama belakang calon mahasiswa" aria-describedby="namehelp">
+                        <small id="namahelp" class="form-text text-muted">Masukan nama belakang sesuai dengan
+                            KTP</small>
+                    </div>
+                </div>
+            </div>
+            <!-- membuat form-radio jenis kelamin -->
+            <div class="form-group mt-4">
+                <label for="jenisKelamin">Jenis Kelamin</label><br>
+                <div class="form-check-inline">
+                    <input type="radio" class="form-check-input" name="jenisKelamin" id="pria" checked="">
+                    <label for="pria">Laki-laki</label>
+                </div>
+
+                <div class="form-check-inline">
+                    <input type="radio" class="form-check-input" name="jenisKelamin" id="wanita">
+                    <label for="wanita">Wanita</label>
+                </div>
+            </div>
+            <!-- membuat form alamat -->
+            <div class="form-group mt-4">
+                <label for="alamat">Alamat Lengkap</label>
+                <input type="text" class="form-control" id="alamat" placeholder="Contoh Jl.Cijerokaso No.60,Sarijadi">
+            </div>
+            <!-- membuat form kota dan negara -->
+            <div class="form-row mt-4">
+                <div class="form-group  col-lg-6">
+                    <label for="kota">Kota Asal</label>
+                    <input type="text" class="form-control" id="kota" placeholder="Contoh Kota Bandung">
+                </div>
+                <div class="form-group  col-lg-6">
+                    <label for="negara">Negara</label>
+                    <select name="negara" id="negara" class="form-control">
+                        <option value="1" selected>Indonesia</option>
+                        <option value="1">Singapura</option>
+                        <option value="1">Amerika</option>
+                        <option value="1">Pakistan</option>
+                        <option value="1">Timor Leste</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- form tempat lahir dan tanggal lahir -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group mt-4">
+                        <label for="inputTempat">Tempat Lahir</label>
+                        <input type="text" id="inputTempat" class="form-control is-invalid"
+                            placeholder="Masukan tempat lahir anda" aria-describedby="tempathelp">
+                        <small id="tempathelp" class="form-text text-muted">Masukan tempat lahir anda sesuai dengan
+                            Kartu
+                            penduduk indonesia (KTP)</small>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group mt-4">
+                        <label for="inputDate">Tanggal Lahir</label>
+                        <input type="date" id="inputDate" class="form-control is-valid" aria-describedby="datehelp">
+                        <small id="datehelp" class="form-text text-muted">Masukan tanggal lahir anda sesuai dengan
+                            Kartu
+                            penduduk indonesia (KTP)</small>
+                    </div>
+                </div>
+            </div>
+            <!-- form select/pilihan program studi -->
+            <div class="form-group mt-4">
+                <label for="prodi">Program Studi</label>
+                <select name="prodi" id="prodi" class="form-control">
+                    <option value="Teknik Mesin">Teknik Mesin</option>
+                    <option value="Teknik Elektro">Teknik Elektro</option>
+                    <option value="Teknik Sipil">Teknik Sipil</option>
+                    <option value="Teknik Pertambangan">Teknik Pertambangan</option>
+                    <option value="Teknik Beton">Teknik Beton</option>
+                </select>
+            </div>
+            <!-- membuat textarea untuk deskripsi -->
+            <div class="form-group mt-4">
+                <label for="deskripsi">Deskripsi</label>
+                <textarea name="deskripsi" id="deskripsi" class="form-control" rows="7"
+                    placeholder="Masukan deskripsi"></textarea>
+            </div>
+            <!-- membuat form file -->
+            <div class="form-group mt-4">
+                <label for="inputFile">Upload dokumen calon mahasiswa</label>
+                <input type="file" class="form-control-file" id="inputFile">
+                <small class="form-text text-muted">Upload dokumen seperti KTP,KK,IZAJAH,AKTE,</small>
+            </div>
+            <!-- membuat form username -->
+            <div class="form-group mt-4">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="email" class="sr-only">Username</label>
+                        <div class="input-group mr-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="text" class="form-control" id="email" placeholder="Masukan Username">
+                        </div>
+                        <small class="form-text text-muted">Masukan Useername anda</small>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Masukan Password">
+                        <small class="form-text text-muted">Masukan Password anda</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- membut form check -->
+            <div class="form-group mt-4">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="setuju">
+                    <label for="seuju" class="form-check-label">Menyetujui</label>
+                </div>
+            </div>
+            <!-- membuat button submit -->
+            <button type="submit" class="btn btn-primary pt-1 pb-1 pl-4 pr-4 mr-2">Kirim</button>
+            <button type="reset" class="btn btn-danger pt-1 pb-1 pl-4 pr-4">Reset</button>
+            <br><br><br>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
